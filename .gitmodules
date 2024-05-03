@@ -1,0 +1,4 @@
+[submodule "cln_pyshu_mint"]
+	path = cln_pyshu_mint
+	url = git@github.com:gudnuf/cln_pyshu_mint
+	branch = btcpp
