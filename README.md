@@ -6,11 +6,11 @@ We are concatenating every nostr event until we can introspect the bolt12 offer 
 
 ### Goal
 
-Create a regtest lightning node environment where L1 can route trough L2 to L3.
+Create a regtest lightning node environment where L1 can route through L2 to L3.
 
 L2 will run the mint and clnrest plugins.
 
-L1 will pay L3's offer
+L1 will pay L3's offers.
 
 ### Session
 
@@ -41,7 +41,7 @@ Make sure you're in the same session as you started regtest.
 
 For some reason clnrest crashes when I have it start along with lightningd, so I disabled it in the lightning.conf created by [startup_regtest](./startup_regtest.sh).
 
-Also, for clnrest to register the REST routes specified in the [cln_pyshu_mint](./cln_pyshu_mint), the mint plugin must be started first.
+Also, for clnrest to register the REST routes specified in the [cln_pyshu_mint](./cln_pyshu_mint), the mint plugin must be started **first**.
 
 This should all work from the flake... but I didn't want to write that.
 
@@ -67,9 +67,9 @@ l2-cli plugin -k subcommand=start plugin=$(pwd)/clnrest/clnrest.py clnrest-port=
 
 ### Run the Zapper
 
-There's a React App in bolt12-covenant-zapper that uses the [cashu-ts](https://github.com/cashubtc/cashu-ts/tree/3d708fdebc366b6474516a42fb5e809beee94ee9) library and if it has nostr functionality it will use [ndk](https://github.com/nostr-dev-kit/ndk).
+There's a React App in [app](app) that uses the [cashu-ts](https://github.com/cashubtc/cashu-ts/tree/3d708fdebc366b6474516a42fb5e809beee94ee9) library and if it has nostr functionality it will use [ndk](https://github.com/nostr-dev-kit/ndk).
 
-Open a new terminal for doing this npm stuff because we don't have node in our flake.
+Open a new terminal for doing this npm stuff because we don't have node in our flake, and we want to be able to start the app while still having access to lightning-cli.
 
 ```
 cd bolt12-covenant-zapper
