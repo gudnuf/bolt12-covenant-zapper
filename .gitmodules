@@ -2,9 +2,6 @@
 	path = cln_pyshu_mint
 	url = git@github.com:gudnuf/cln_pyshu_mint
 	branch = btcpp
-[submodule "bolt12-adder/cln_nwc"]
-	path = bolt12-adder/cln_nwc
-	url = git@github.com:gudnuf/cln_nwc.git
 [submodule "cln_nwc"]
 	path = cln_nwc
 	url = git@github.com:gudnuf/cln_nwc.git
