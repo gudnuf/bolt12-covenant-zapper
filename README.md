@@ -2,6 +2,16 @@
 
 We are concatenating every nostr event until we can introspect the bolt12 offer committed to in a recipeint's [kind 0 metadata](https://github.com/nostr-protocol/nips/blob/master/01.md#kinds).
 
+## What we did
+
+We forked [nostrudel](https://nostrudel.ninja), a nostr client, and added bolt12 support.
+
+You can now add a bolt12 offer to your Kind 0 metadata, and then zap users to their bolt12.
+
+There are 3 methods to zap a bolt12 in nostrudel now.
+
+Two of these use [bitcoin-connect](https://github.com/bitcoin-connect), and one uses cashu.
+
 ## Setting up the development
 
 ### Goal
